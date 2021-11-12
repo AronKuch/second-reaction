@@ -1,6 +1,7 @@
 // a lot of code is from https://lnkd.in/gsVzcz4 and https://lnkd.in/gMqCjcx
 
 import {BiSearch, BiCaretDown, BiCheck}  from "react-icons/bi";
+import {useState} from 'react';
 
 const DropDown = () => {
   return (
@@ -28,6 +29,7 @@ const DropDown = () => {
 }
 
 const Search = () => {
+  let [showSearch, toggleSearch] = useState(false);
   return (
     <div className="py-5">
   <div className="mt-1 relative rounded-md shadow-sm">
@@ -39,11 +41,11 @@ const Search = () => {
       className="pl-8 rounded-md focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300" placeholder="Search" />
     <div className="absolute inset-y-0 right-0 flex items-center">
       <div>
-        <button type="button"
+        <button type="button" onClick = {() => toggleSearch(!showSearch)}
           className="justify-center px-4 py-2 bg-red-400 border-2 border-red-400 text-sm text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 flex items-center" id="options-menu" aria-haspopup="true" aria-expanded="true">
           Sort By <BiCaretDown className="ml-2" />
         </button>
-        <DropDown />
+        {showSearch ? <DropDown /> : null}
       </div>
     </div>
   </div>
