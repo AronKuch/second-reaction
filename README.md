@@ -4,6 +4,8 @@ This project is following along with the LinkedIn Learning course React.js: Buil
 
 Generally I watch the video and follow along, but also make my own modifications to appeal to my tastes and ensure that I understand the concepts.
 
+This course wasn't great. There was too much copy of html from the instructor's page. Also he went over concepts rather quickly without a lot of explaination of why. It did introduce me to some cool libraries like the icons and Tailwind CSS.
+
 ## Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
